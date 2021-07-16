@@ -1,24 +1,23 @@
-import logo from './logo.svg';
 import './App.css';
 
+import React from 'react'
+import photo from './ines.jpg'
+import Profile from './profile/profile'
 function App() {
-  return (
+  const handleName = (fullName) => alert(fullName);
+  console.log(photo)
+    return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+     <Profile  fullName={"Bouallegue Ines"}
+      profession ={"Web Developer"}
+      bio={"Profession hautement technique, le développeur informatique est avant tout un expert des langages informatiques codés. Il est aussi bien capable de concevoir et créer des logiciels, applications et/ou sites web, que de tester et améliorer ceux qui sont déjà existants "}
+      handleName={handleName}
+
+      >
+       
+        {photo}
+        </Profile>
+   </div>
   );
 }
 
